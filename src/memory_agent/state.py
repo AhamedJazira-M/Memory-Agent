@@ -1,22 +1,12 @@
-"""Define the shared values."""
+from dataclasses import dataclass, field
+from typing import List, Optional, Any
 
-from __future__ import annotations
+@dataclass
+class Message:
+    role: str
+    content: str
+    tool_calls: Optional[List[Any]] = field(default_factory=list)
 
-from dataclasses import dataclass
-
-from langchain_core.messages import AnyMessage
-from langgraph.graph import add_messages
-from typing_extensions import Annotated
-
-
-@dataclass(kw_only=True)
+@dataclass
 class State:
-    """Main graph state."""
-
-    messages: Annotated[list[AnyMessage], add_messages]
-    """The messages in the conversation."""
-
-
-__all__ = [
-    "State",
-]
+    messages: List[Message] = field(default_factory=list)
