@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # LangGraph ReAct Memory Agent
 
 [![CI](https://github.com/langchain-ai/memory-agent/actions/workflows/unit-tests.yml/badge.svg)](https://github.com/langchain-ai/memory-agent/actions/workflows/unit-tests.yml)
